@@ -26,6 +26,13 @@ spec:
         image: agunuworld/java-web-app:22
         ports:
         - containerPort: 8080
+        resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits: 
+              cpu: "100m"
+              memory: "256Mi"
 
 
 ---
