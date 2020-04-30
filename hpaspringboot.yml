@@ -1,1 +1,36 @@
 
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: springapprc
+  namespace: jacocoworld4
+spec:
+  replicas: 2
+  selector:
+    app: springbootapp
+  template:
+    metadata:
+      name: springbootapppod
+      labels:
+        app: springbootapp
+    spec:
+      containers:
+        - name: springbootcontainer
+          image: dockerhandson/spring-boot-mongo
+          ports:
+           - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: springappservice
+  namespace: jacocoworld4
+spec:
+  type: ClusterIP
+  selector:
+     app: springbootapp
+  ports:
+  - port: 80
+    targetPort: 8080
+    nodePort: 30001
