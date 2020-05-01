@@ -1,10 +1,4 @@
-1.Methun Technology Method
-2.Madhu Ansible Method
-User name,Password,Access key ID,Secret access key,Console login link
-TerraForm_User,,AKIAUQ6YGCGHCGI4WLMI
-GGYFda14YPQi94W/q5i6VEr9aiNsvvSz/03PGtyM
-,https://311301640590.signin.aws.amazon.com/console
-ami-0520e698dd500b1d1
+
 https://www.terraform.io/docs/providers/aws/r/elb.html --------load balancer
 https://medium.com/@ratulbasak93/aws-elb-and-autoscaling-using-terraform-9999e6266734
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
