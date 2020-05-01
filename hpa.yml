@@ -4,9 +4,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hpadeployment
-  labels:
     name: hpadeployment
+    namespace: jacocoworld4
 spec:
   replicas: 2
   selector:
@@ -55,8 +54,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hpaclusterservice
-  labels:
-    name: hpaservice
+  namespace: jacocoworld4
 spec:
   ports:
     - port: 80
