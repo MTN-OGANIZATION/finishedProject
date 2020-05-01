@@ -34,7 +34,7 @@ spec:
               cpu: "100m"
               memory: "256Mi"
  
-  # HPA For above deployment(hpadeployment)
+  # #HPA For above deployment(hpadeployment)
 ---
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
