@@ -1,0 +1,43 @@
+                                                                                         #Final Job
+first: ingrees namespace
+        :daemonSet for pods
+second: LoadBalancer
+third: create all the applications
+fourth: Define the ingrees rule host or path based routing
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-resource-1
+spec:
+  rules:
+  - host: javaweb.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: javawebappservice
+          servicePort: 80
+  - host: springboot.example.com
+    http:
+      paths:
+      - backend:
+          serviceName: springappservice
+          servicePort: 80	
+========================================================================
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-resource-1
+spec:
+  rules:
+  - host: springboot.example.com
+    http:
+      paths:
+      # Default Path(/)
+      - backend:
+          serviceName: springappservice
+          servicePort: 80
+      - path: /javaweb.example.com
+        backend:
+          serviceName: javawebappservice
+          servicePort: 80	
