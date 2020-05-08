@@ -1,3 +1,6 @@
+#Amazon Linux needed set the instance without port mapping and attach iam role(adminstratoraccess)assign the role to the instance
+#aws needs to be install already
+#checking awd --versin
 curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.16.8/2020-04-16/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mkdir -p $HOME/bin
